@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heat Index Awareness · National Aviation Academy of the Philippines</title>
+<meta name="description" content="Learn what heat index means, how heat affects your body, and how to stay safe. A student awareness site of the National Aviation Academy of the Philippines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="marble" aria-hidden="true"></div>
+<div id="sbar" aria-hidden="true"></div>
+
+<header class="topbar glass">
+  <img src="assets/naap-logo.png" alt="National Aviation Academy of the Philippines logo">
+  <span class="tt">National Aviation Academy of the Philippines</span>
+  <button id="snd" class="pill" type="button" aria-pressed="true" title="Sound on/off">🔊</button>
+</header>
+
+<main>
+<section class="hero sec" id="hero" data-flora="Hi! I'm Flora 🌸 Let's learn what heat index really means!" data-mood="hello">
+  <div class="wrap hero-grid">
+    <div>
+      <img class="crest rv" src="assets/naap-logo.png" alt="">
+      <p class="eyebrow rv">Student heat awareness</p>
+      <h1 class="rv">Heat Index</h1>
+      <h2 class="rv">Understanding how heat really feels — and how it affects your body.</h2>
+      <p class="lead rv">Made for the students of the National Aviation Academy of the Philippines.</p>
+      <a class="btn rv" href="#what">Start learning</a>
+    </div>
+    <div class="heater glass rv" id="heater" data-l="0" role="img" aria-label="Animated thermometer rising and falling through the heat index levels">
+      <div class="sun" id="hsun">☀️</div>
+      <div class="th"><div class="tube"><i id="mercury"></i></div><div class="bulb"></div><span id="ticks"></span></div>
+      <div class="readout"><b id="hNum">27</b><small>°C feels like</small></div>
+      <span class="badge" id="hLvl">Caution</span>
+      <i class="hw"></i><i class="hw"></i><i class="hw"></i><i class="hw"></i>
+      <p class="note">Tap the thermometer to make it spike! 🔥</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="what" data-flora="Hover over the words and icons. They bump! 👆" data-mood="happy">
+  <div class="wrap">
+    <h2 class="t rv">What is heat index?</h2>
+    <p class="lead rv">Heat index describes how hot it actually feels to your body when air temperature and humidity are considered together.</p>
+    <div class="grid3">
+      <div class="glass card cardb rv"><div class="em ic ic-t">🌡️</div><h3 class="bw">Air temperature</h3><p class="bw">How hot the air is, as a thermometer reads it.</p></div>
+      <div class="glass card cardb rv"><div class="em ic ic-h">💧</div><h3 class="bw">Humidity</h3><p class="bw">How much moisture is in the air. Sweat dries slowly in humid air, so your body cools down less.</p></div>
+      <div class="glass card cardb rv"><div class="em ic ic-u">🥵</div><h3 class="bw">Why it is useful</h3><p class="bw">The thermometer can say 33 °C while your body feels like it is 41 °C. Heat index tells you the feeling that matters for safety.</p></div>
+    </div>
+    <div class="glass card calc rv" id="calc" data-flora="Drag the sliders. Watch the colors and watch her face! 🎛️" data-mood="think">
+      <h3>Try it: how hot does it feel?</h3>
+      <div class="calc-grid">
+        <div>
+          <label for="hT">Air temperature <output id="hTo">33 °C</output></label>
+          <input id="hT" type="range" min="24" max="45" step="0.5" value="33">
+          <p class="guide" id="gT"></p>
+          <label for="hH">Humidity <output id="hHo">60 %</output></label>
+          <input id="hH" type="range" min="20" max="100" step="1" value="60">
+          <div class="legend" aria-label="Color guide for the slider tracks"><span style="--c:#8fdcae">Comfortable</span><span style="--c:#f1bd5a">Caution</span><span style="--c:#ff9a3c">Extreme Caution</span><span style="--c:#e5484d">Danger</span><span style="--c:#7b3fb8">Extreme Danger</span></div>
+          <p class="note">The slider colors show the warning level you would reach at that setting, keeping the other slider where it is. Uses the NOAA/NWS heat index equation and PAGASA's warning levels. It is most accurate above about 27 °C and 40% humidity.</p>
+        </div>
+        <div class="result">
+          <figure class="girlfig">
+            <svg class="girl" id="girl" data-s="0" viewBox="0 0 150 190" role="img" aria-label="A student whose face changes with the heat index">
+              <g class="gbody">
+                <path d="M30 70 Q28 18 75 16 Q122 18 120 70 L126 156 Q75 168 24 156Z" fill="#1d1222"/>
+                <path d="M18 190 L22 142 Q26 118 56 114 L94 114 Q124 118 128 142 L132 190Z" fill="#f1edff" stroke="#c9bdf0"/>
+                <path d="M62 116 L75 134 L88 116Z" fill="#fff" stroke="#c9bdf0"/>
+                <rect x="65" y="94" width="20" height="24" fill="#f0c4a0"/>
+                <circle cx="75" cy="62" r="34" fill="#f5cfae"/>
+                <ellipse class="flush" cx="75" cy="64" rx="33" ry="31" fill="#ff3b30"/>
+                <path d="M40 58 Q38 24 75 22 Q112 24 110 58 Q100 38 75 38 Q50 38 40 58Z" fill="#1d1222"/>
+                <circle cx="49" cy="70" r="5" fill="#ff8fbd" opacity=".5"/><circle cx="101" cy="70" r="5" fill="#ff8fbd" opacity=".5"/>
+                <g class="v v0 v1"><ellipse cx="62" cy="62" rx="3.4" ry="4.6" fill="#2a1424"/><ellipse cx="88" cy="62" rx="3.4" ry="4.6" fill="#2a1424"/><circle cx="63" cy="60.5" r="1.2" fill="#fff"/><circle cx="89" cy="60.5" r="1.2" fill="#fff"/></g>
+                <g class="v v2" fill="none" stroke="#2a1424" stroke-width="2.6" stroke-linecap="round"><path d="M56 62 L68 62"/><path d="M82 62 L94 62"/></g>
+                <g class="v v3" fill="none" stroke="#2a1424" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M57 56 L68 62 L57 68"/><path d="M93 56 L82 62 L93 68"/></g>
+                <g class="v v4" fill="none" stroke="#2a1424" stroke-width="1.6"><g transform="translate(62 62)"><g class="spin"><path d="M0 -1.5 a1.5 1.5 0 0 1 1.5 1.5 a3 3 0 0 1 -3 3 a4.8 4.8 0 0 1 -4.8 -4.8 a6.6 6.6 0 0 1 6.6 -6.6"/></g></g><g transform="translate(88 62)"><g class="spin"><path d="M0 -1.5 a1.5 1.5 0 0 1 1.5 1.5 a3 3 0 0 1 -3 3 a4.8 4.8 0 0 1 -4.8 -4.8 a6.6 6.6 0 0 1 6.6 -6.6"/></g></g></g>
+                <path class="v v0" d="M62 78 Q75 92 88 78" fill="#a8284f" stroke="#2a1424" stroke-width="2" stroke-linejoin="round"/>
+                <path class="v v1" d="M64 80 Q75 86 86 80" fill="none" stroke="#2a1424" stroke-width="2.6" stroke-linecap="round"/>
+                <path class="v v2" d="M62 82 q4 -5 8 0 t8 0 t8 0" fill="none" stroke="#2a1424" stroke-width="2.4" stroke-linecap="round"/>
+                <ellipse class="v v3 pant" cx="75" cy="82" rx="8" ry="7" fill="#7a1030"/>
+                <g class="v v4"><path d="M60 80 q5 -5 10 0 t10 0 t10 0" fill="none" stroke="#2a1424" stroke-width="2.4" stroke-linecap="round"/><path d="M70 81 Q75 100 82 81Z" fill="#ff8a9a" stroke="#c4506a"/></g>
+                <path class="sw v v1 v2 v3 v4" d="M108 38 Q113 46 108 51 Q103 46 108 38Z" fill="#dff3ff" stroke="#6bb8ee"/>
+                <path class="sw sw2 v v2 v3 v4" d="M42 44 Q47 52 42 57 Q37 52 42 44Z" fill="#dff3ff" stroke="#6bb8ee"/>
+                <path class="sw sw3 v v3 v4" d="M112 62 Q117 70 112 75 Q107 70 112 62Z" fill="#dff3ff" stroke="#6bb8ee"/>
+                <g class="v v2 v3 v4 fan"><path d="M128 142 L120 108" stroke="#f1edff" stroke-width="12" stroke-linecap="round"/><path d="M120 104 L98 78 Q120 60 142 78Z" fill="#f1bd5a" stroke="#c2306f"/></g>
+                <g class="v v4" fill="#fff"><ellipse class="st" cx="52" cy="12" rx="7" ry="5"/><ellipse class="st st2" cx="75" cy="6" rx="8" ry="5"/><ellipse class="st st3" cx="98" cy="12" rx="7" ry="5"/></g>
+              </g>
+            </svg>
+            <figcaption id="gCap" aria-live="polite">Feeling fine! 😊</figcaption>
+          </figure>
+          <div class="big"><span id="hiVal">–</span><small>°C feels like</small></div>
+          <div class="badge" id="hiBadge">–</div>
+          <p id="hiEffect"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="levels" data-flora="Tap a level and watch the dial swing! 🧭" data-mood="wow">
+  <div class="wrap">
+    <h2 class="t rv">Heat index levels</h2>
+    <p class="lead rv">These are the warning levels used by PAGASA, the Philippine weather bureau. Pick a level and see the needle move.</p>
+    <div class="dialwrap rv">
+      <div class="glass dialbox" id="dialbox">
+        <svg viewBox="0 0 300 190" id="dial" role="img" aria-label="Heat index dial from comfortable to extreme danger">
+          <g id="arcs"></g><g id="dticks"></g>
+          <g class="needle" id="needle"><line x1="150" y1="150" x2="62" y2="150" stroke="#4a1330" stroke-width="5" stroke-linecap="round"/></g>
+          <circle cx="150" cy="150" r="11" fill="#4a1330"/><circle cx="150" cy="150" r="4" fill="#fff"/>
+          <text id="dName" x="150" y="182" text-anchor="middle" font-family="Source Serif 4,serif" font-weight="700" font-size="17" fill="#4a1330">Pick a level</text>
+        </svg>
+      </div>
+      <div>
+        <div class="lvtabs" id="lvtabs" role="tablist"></div>
+        <div class="glass lvpanel" id="lvpanel" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="body" data-flora="Follow the trail down. Each stop pops up! 👣" data-mood="excited">
+  <div class="wrap">
+    <h2 class="t rv">How does heat affect your body?</h2>
+    <p class="lead rv">Your body cools itself by sweating. When heat and humidity are too high, that system struggles. Scroll down the trail to follow what can happen, from mild to serious.</p>
+    <div class="trail" id="trail"><svg class="tsvg" id="tsvg" aria-hidden="true"><path id="tbg" class="tbg"/><path id="tfg" class="tfg"/><circle id="tdot" r="8" cx="-30" cy="-30" fill="#fff"/></svg></div>
+  </div>
+</section>
+
+<section class="sec alt" id="safety" data-flora="Tick a habit and I'll show you how it's done! 🌼" data-mood="cool">
+  <div class="wrap">
+    <h2 class="t rv">Heat safety</h2>
+    <p class="lead rv">Tap each habit to mark it as something you will do. Flora will show you how.</p>
+    <div class="checks" id="checks"></div>
+    <div class="glass card alert rv"><h3>🚨 Get help right away if you see</h3><p>Confusion, fainting, a very hot body, hot flushed skin, seizures, or a person who will not wake up. This can be heat stroke, a medical emergency. Move the person to shade, cool them down, and call emergency services or a teacher or medic immediately.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="authors" data-flora="These two built this site. Say hi! 👋" data-mood="love">
+  <div class="wrap">
+    <h2 class="t rv">Meet the developers</h2>
+    <p class="lead rv">This website was developed by two BSIT – AIT 1-2 students.</p>
+    <div class="authors">
+      <div class="glass card author rv"><img src="assets/johanne.jpg" alt="Photo of Johanne Reigne L. Libiran"><h3>Johanne Reigne L. Libiran</h3><p>BSIT – AIT 1-2</p><span class="tag" style="--c:#b32467">Website developer</span></div>
+      <div class="glass card author rv" style="--d:.1s"><img src="assets/flonie.jpg" alt="Photo of Flonie Joy D. Castillo"><h3>Flonie Joy D. Castillo</h3><p>BSIT – AIT 1-2</p><span class="tag" style="--c:#b32467">Website developer</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">National Aviation Academy of the Philippines · Heat index awareness for students · Developed by Johanne Reigne L. Libiran and Flonie Joy D. Castillo (BSIT – AIT 1-2). This site is educational and is not medical advice. If you feel seriously unwell, ask for help.</div></footer>
+
+<div id="stage" class="stage" aria-live="polite"><div class="stagebox glass"><div class="sbig fl" data-mood="happy"></div><span class="prop"></span><p class="scap"></p></div></div>
+
+<div id="flora" class="fl" data-mood="hello">
+  <button class="mx" id="fx" type="button" aria-label="Hide Flora">×</button>
+  <button class="mchar" id="fchar" type="button" aria-label="Flora, your heat safety guide. Tap for a tip.">
+    <svg viewBox="0 0 100 130" aria-hidden="true">
+      <path d="M50 76 Q44 104 52 126" fill="none" stroke="#3f8c5e" stroke-width="5" stroke-linecap="round"/>
+      <ellipse class="leafw" cx="38" cy="104" rx="11" ry="5" fill="#4aa46f" transform="rotate(-25 38 104)"/>
+      <ellipse cx="62" cy="98" rx="11" ry="5" fill="#4aa46f" transform="rotate(25 62 98)"/>
+      <g class="petals"><ellipse cx="50" cy="26" rx="11" ry="20" fill="#ff8fbd" stroke="#b32467" stroke-width="1.2"/><ellipse cx="50" cy="26" rx="11" ry="20" fill="#ff8fbd" stroke="#b32467" stroke-width="1.2" transform="rotate(45 50 50)"/><ellipse cx="50" cy="26" rx="11" ry="20" fill="#ff8fbd" stroke="#b32467" stroke-width="1.2" transform="rotate(90 50 50)"/><ellipse cx="50" cy="26" rx="11" ry="20" fill="#ff8fbd" stroke="#b32467" stroke-width="1.2" transform="rotate(135 50 50)"/><ellipse cx="50" cy="26" rx="11" ry="20" fill="#ff8fbd" stroke="#b32467" stroke-width="1.2" transform="rotate(180 50 50)"/><ellipse cx="50" cy="26" rx="11" ry="20" fill="#ff8fbd" stroke="#b32467" stroke-width="1.2" transform="rotate(225 50 50)"/><ellipse cx="50" cy="26" rx="11" ry="20" fill="#ff8fbd" stroke="#b32467" stroke-width="1.2" transform="rotate(270 50 50)"/><ellipse cx="50" cy="26" rx="11" ry="20" fill="#ff8fbd" stroke="#b32467" stroke-width="1.2" transform="rotate(315 50 50)"/></g>
+      <circle cx="50" cy="50" r="19" fill="#ffd54a" stroke="#e0a800" stroke-width="1.5"/>
+      <circle cx="39" cy="56" r="3.4" fill="#ff8fbd" opacity=".65"/><circle cx="61" cy="56" r="3.4" fill="#ff8fbd" opacity=".65"/>
+      <g class="e e-n"><ellipse class="eye" cx="43" cy="47" rx="2.6" ry="3.6" fill="#4a1330"/><ellipse class="eye" cx="57" cy="47" rx="2.6" ry="3.6" fill="#4a1330"/><circle cx="44" cy="45.6" r="1" fill="#fff"/><circle cx="58" cy="45.6" r="1" fill="#fff"/></g>
+      <g class="e e-h" fill="none" stroke="#4a1330" stroke-width="2.2" stroke-linecap="round"><path d="M39 50 Q43 43 47 50"/><path d="M53 50 Q57 43 61 50"/></g>
+      <g class="e e-w"><ellipse cx="43" cy="47" rx="3.6" ry="4.8" fill="#4a1330"/><ellipse cx="57" cy="47" rx="3.6" ry="4.8" fill="#4a1330"/><circle cx="44.2" cy="45" r="1.4" fill="#fff"/><circle cx="58.2" cy="45" r="1.4" fill="#fff"/></g>
+      <g class="e e-c"><path d="M35 43 H49 Q49 52 42 52 Q35 52 35 43Z" fill="#2a1424"/><path d="M51 43 H65 Q65 52 58 52 Q51 52 51 43Z" fill="#2a1424"/><path d="M49 44 H51" stroke="#2a1424" stroke-width="2"/></g>
+      <g class="e e-l" fill="#ff4d6d"><path d="M43 52 C37 47 39 42 43 44.5 C47 42 49 47 43 52Z"/><path d="M57 52 C51 47 53 42 57 44.5 C61 42 63 47 57 52Z"/></g>
+      <path class="o o-s" d="M44 56 Q50 62 56 56" fill="none" stroke="#4a1330" stroke-width="2" stroke-linecap="round"/>
+      <path class="o o-p" d="M43 55 Q50 68 57 55Z" fill="#7a1030"/>
+      <ellipse class="o o-w" cx="50" cy="59" rx="3" ry="4" fill="#7a1030"/>
+    </svg>
+  </button>
+  <div class="mbub" id="fbub" role="status"></div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
